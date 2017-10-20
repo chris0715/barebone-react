@@ -1,0 +1,9 @@
+$variable: red;
+
+body {
+    background-color: $variable
+}
+.container {
+    width: 50%;
+    margin: auto;
+}
