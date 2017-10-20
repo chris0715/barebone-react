@@ -1,6 +1,5 @@
-import './styles.scss'
-class aa {
-  create() {
-    console.log('I am creating right now')
-  }
-}
+import ReactDOM from 'react-dom'
+import App from './App'
+require('./assets/stylesheets/styles.scss') 
+
+ReactDOM.render(<App />, document.getElementById('root'))

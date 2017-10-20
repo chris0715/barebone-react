@@ -17,12 +17,20 @@ const config = {
         loader: "babel-loader"
       },
       {
-        test: /(\.scss$|\.sass$|\.css$)/,
+        test: /(\.scss|\.sass|\.css)/,
         use: ExtractTextWebpackPlugin.extract({
           use: ['css-loader', 'sass-loader'], 
           fallback: 'style-loader'
-        }),
+        })
+      },
+      {
+        test: /\.(jpe?g|png)$/,
+        use: ['file-loader', {
+          loader: "image-webpack-loader"
+        }]
+        
       }
+      
     ]
   }, 
   plugins: [
